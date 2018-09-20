@@ -1,0 +1,83 @@
+
+{
+    "enabled": true,
+    "coin": "lonero.json",
+
+    "auxes": [ // Defines auxillery coins
+        {
+            "coin": "lonero.json",
+            "daemons": [ // It is reccomended to supply multiple daemons here for redundancy
+                {
+                    "host": "142.93.171.115",
+                    "port": 34414,
+                    "user": "EnterUsername",
+                    "password": "EnterPass"
+                }
+            ]
+        }
+    ],
+    "address": "EnterPoolAddressHere",
+
+    "rewardRecipients": {
+        "EnterRewardAddressHere": 2
+    },
+
+    "paymentProcessing": {
+        "enabled": true,
+        "paymentInterval": 10,
+        "minimumPayment": 0,
+        "daemon": {
+            "host": "127.0.0.1",
+            "port": 19334,
+            "user": "testuser",
+            "password": "testpass"
+        }
+    },
+
+    "ports": {
+        "3010": {
+            "diff": 8
+        },
+        "3034": {
+            "diff": 32,
+            "varDiff": {
+                "minDiff": 8,
+                "maxDiff": 512,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        },
+        "3260": {
+            "diff": 120
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "127.0.0.1",
+            "port": 19334,
+            "user": "testuser",
+            "password": "testpass"
+        }
+    ],
+
+    "p2p": {
+        "enabled": true,
+        "host": "127.0.0.1",
+        "port": 29333,
+        "disableTransactions": false
+    },
+
+    "mposMode": {
+        "enabled": true,
+        "host": "127.0.0.1",
+        "port": 3308,
+        "user": "me",
+        "password": "mypass",
+        "database": "ltc",
+        "checkPassword": false,
+        "autoCreateWorker": false
+    }
+
+}
